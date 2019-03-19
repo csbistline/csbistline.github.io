@@ -2,62 +2,428 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Chris Bistline</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chris Bistline</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" sizes="16x16">
 
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+
+  <!-- moment.js -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+    integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+    crossorigin="anonymous"></script>
+
+  <!-- Custom styles for this template -->
+  <link href="css/resume.css" rel="stylesheet">
+
 </head>
 
-<body>
-    <div class="container">
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-sm navbar-dark sticky-top" style="background-color: #6d0000;">
-            <a class="navbar-brand mb-0 h1 font-weight-bolder" href="#">CHRIS BISTLINE</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ml-auto w-100 justify-content-end">
-                    <a class="nav-item nav-link active" href="index.html">About</a>
-                    <a class="nav-item nav-link" href="portfolio.html">Portfolio</a>
-                    <a class="nav-item nav-link" href="contact.html">Contact</a>
-                </div>
-            </div>
+<body id="page-top">
 
-        </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <span class="d-block d-lg-none">Chris Bistline</span>
+      <span class="d-none d-lg-block">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+        </li>
 
-        <!-- profile pic and headline jumbotron -->
-        <div class="jumbotron jumbotron-fluid text-center bg-transparent">
-            <div class="container-fluid">
-                <img src="assets/images/chris-profile-pic.png" class="rounded-circle" height="300px">
-                <h1 class="display-3 font-weight-bold">Chris Bistline</h1>
-                <h2 class="mt-4" style="color: #6d0000">WEB DEVELOPER - GRAPHIC DESIGNER - JOURNALIST</h2>
-                <!-- <hr class="my-4"> -->
-                <h3 class="mt-4">This is a line of type that'll say something snarky about me.</h3>
-            </div>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid p-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+      <div class="w-100">
+        <h1 class="mb-0">Chris
+          <span class="text-primary">Bistline</span>
+        </h1>
+        <div class="subheading mb-5">708 Neill Ave, Apt A · Nashville, TN 37206 · (314) 650-1219 ·
+          <a href="mailto:name@email.com">chris.bistline@gmail.com</a>
+        </div>
+        <p class="lead mb-5">I am a web developer, graphic designer, journalist and manager with more than 20 years
+          experience creating content for print and web spaces.</p>
+
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/christopher-bistline-a0999a115/" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/csbistline" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.facebook.com/chris.bistline" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
 
         </div>
-        <footer class="text-center small container">
-            Made by Chris Bistline. Copyright &copy; | 2019
-        </footer>
-    </div>
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="portfolio">
+      <div class="w-100">
+        <h2 class="mb-5">Portfolio</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-3">Web Development</h3>
+
+            <div class="row">
+
+              <div class="col-md-4 mb-4"><a href="https://csbistline.github.io/NomadTraveler/" target="_blank"><img
+                    src="img/aircraft.jpg" class="portfolio-pic"></a>
+                <div class="d-none d-block mt-3">
+                  <div class="subheading">Nomad Traveler</div>
+                  <p>Our first group project: a travel app that builds on all previous work</p>
+                </div>
+              </div>
 
 
+              <div class="col-md-4 mb-4"><a href="https://csbistline.github.io/unit-4-game/" target="_blank"><img
+                    src="img/deathstar.jpg" class="portfolio-pic"></a>
+                <div class="d-none d-block mt-3">
+                  <div class="subheading">Star Wars Fighter</div>
+                  <p>A Star Wars-themed Javascript game - with real lightsaber sounds!</p>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-4"><a href="https://csbistline.github.io/TriviaGame/" target="_blank"><img
+                    src="img/sport-balls.jpg" class="portfolio-pic"></a>
+                <div class=" d-none d-block mt-3">
+                  <div class="subheading">Sports Trivia Game</div>
+                  <p>Trivia game coded with jQuery and implementing Javascript timers</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4"><a href="https://csbistline.github.io/APIApp/" target="_blank"><img
+                    src="img/flyingcat.gif" class="portfolio-pic"></a>
+                <div class=" d-none d-block mt-3">
+                  <div class="subheading">GIF-tastic</div>
+                  <p>An app for collecting and saving all your favorite GIFs</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4"><a href="https://csbistline.github.io/TrainsSked/" target="_blank"><img
+                    src="img/train.jpg" class="portfolio-pic"></a>
+                <div class=" d-none d-block mt-3">
+                  <div class="subheading">Train Schedule</div>
+                  <p>Build your own train schedule with Firebase and Moment.js</p>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-4"><a href="https://csbistline.github.io/Word-Guess-Game/" target="_blank"><img
+                    src="img/circle-question-mark-512.png" class="portfolio-pic"></a>
+                <div class=" d-none d-block mt-3">
+                  <div class="subheading">Hall of Fame Hangman</div>
+                  <p>A word-guessing game where the subject is MLB Hall of Famers</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
 
 
-    <!-- bootstrap javascript files -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
+          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="resume-content">
+              <h3 class="mb-3">Print design</h3>
+
+              <div class="row">
+              </div>
+
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <hr class="m-0">
+
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="experience">
+      <div class="w-100">
+        <h2 class="mb-5">Experience</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Web Developer/Designer</h3>
+            <div class="subheading mb-3">Vanderbilt University Coding Bootcamp</div>
+
+            <p>Studying HTML5, CSS3, JavaScript, jQuery, Bootstrap, Express.js, React.js, Node.js, Database Theory,
+              MongoDB, MySQL, Command Line, Git, and more. This program is offered through Vanderbilt University Owen
+              Graduate School of Management and School of Engineering, in partnership with Trilogy Education Services,
+              Inc. <a href="https://business.vanderbilt.edu/executive-education/online-learning/coding-boot-camp/"
+                target="_blank">More info</a></p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">January 2019 - Present <br> Nashville, Tenn. </span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Owner, director</h3>
+            <div class="subheading mb-3">Ensley LLC/Delmas LLC Properties</div>
+            <p>Manage portfolio of 20 residential rental property units made up of traditional long-term rentals and
+              short-term vacation rentals. Screen tenants, perform minor maintenance, hire contractors for major
+              repairs, manage finances, communicate with short-term guests.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">June 2013 - Present <br> Nashville, Tenn. </span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Sports Team Leader</h3>
+            <div class="subheading mb-3">Gannett Nashville Design Studio</div>
+            <p>As Sports Team Leader, managed 20+ designers and editors responsible for nightly production of 16 sports
+              sections, MLB/NBA/NHL pages and national agate package used by all Gannett newspapers. As Senior Designer,
+              responsible for design of news, sports and Sunday sections for two Florida newspapers.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">May 2011 - June 2018 <br> Nashville, Tenn. </span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Creative Director</h3>
+            <div class="subheading mb-3">Inktank Communications</div>
+            <p>Managed design team and oversaw creative direction of a financial communications agency whose clients
+              included some of the country’s largest banks, investment firms and property developers.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">December 2010 - January 28, 2011<br> Cairo, Egypt </span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Art Director</h3>
+            <div class="subheading mb-3">Tide Media</div>
+            <p>Managed design and production of three leading technology magazines: New Age Gaming, SA Computer Magazine
+              and Custom PC South Africa as well as several regular supplements. Wrote video game and consumer
+              electronics reviews. Copy edited magazines. Traveled internationally to cover video game launches.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">January 2005 – December 2010<br>Johannesburg, South Africa</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Assistant Editor/Design Coordinator</h3>
+            <div class="subheading mb-3">IBA Media</div>
+            <p>At Business Today Egypt, directed presentation of Egypt’s leading English-language business magazine.
+              Lead designer for Egypt Today, Egypt’s best-selling and oldest English-language general-interest magazine.
+            </p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">November 2001 - August 2004<br>Cairo, Egypt</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Designer</h3>
+            <div class="subheading mb-3">Bucks County Courier Times</div>
+            <p>Responsible for presentation of sports, money and news covers. Managed pagination staff at night.
+            </p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">November 1999 - June 2001<br>Levittown, Pa.</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">South Florida Sun-Sentinel</h3>
+            <div class="subheading mb-3">Sports Designer/Copy Editor</div>
+            <p>Versatile member of award-winning sports department.
+            </p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">May 1997 - September 1999<br>Fort Lauderdale, Fla. </span>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
+      <div class="w-100">
+        <h2 class="mb-5">Education</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Vanderbilt University</h3>
+            <div class="subheading mb-3">Coding Bootcamp</div>
+            <div>Full-Stack Web Development Track</div>
+            <p>Expected course completion: July 2019</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">January 2019 - Present<br> Nashville, Tenn. </span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">Indiana University</h3>
+            <div class="subheading mb-3">BA Journalism </div>
+            <p>Secondary focus in Computer Science</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">August 1993 - May 1997<br> Bloomington, Ind. </span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
+      <div class="w-100">
+        <h2 class="mb-5">Skills</h2>
+
+        <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+        <ul class="list-inline dev-icons">
+          <li class="list-inline-item">
+            <i class="fab fa-html5"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-css3-alt"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-js-square"></i>
+          </li>
+          <!-- <li class="list-inline-item">
+            <i class="fab fa-angular"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-react"></i>
+          </li> -->
+          <li class="list-inline-item">
+            <i class="fab fa-node-js"></i>
+          </li>
+          <!-- <li class="list-inline-item">
+            <i class="fab fa-sass"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-less"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-wordpress"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-gulp"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-grunt"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-npm"></i>
+          </li> -->
+        </ul>
+
+        <div class="subheading mb-3">Design Skills &amp; Tools</div>
+        <ul class="list-inline dev-icons">
+          <li class="list-inline-item">
+            <img src="https://img.icons8.com/ios/50/000000/adobe-indesign.png"></li>
+          </li>
+          <li class="list-inline-item">
+            <img src="https://img.icons8.com/ios/50/000000/adobe-photoshop.png">
+          </li>
+          <li class="list-inline-item">
+            <img src="https://img.icons8.com/ios/50/000000/adobe-illustrator.png">
+          </li>
+          <li class="list-inline-item">
+            <img src="https://img.icons8.com/ios/50/000000/adobe-dreamweaver.png">
+          </li>
+          <li class="list-inline-item">
+            <img src="https://img.icons8.com/ios/50/000000/adobe-bridge.png">
+          </li>
+          <li class="list-inline-item">
+            <img src="img/cci.png" style="width: 45px">
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
+      <div class="w-100">
+        <h2 class="mb-5">Interests</h2>
+        <p>Apart from being immersed in studying web development, I'm a die-hard St. Louis Cardinals baseball fan. I
+          travel to Florida every year to catch a few Spring Training games and participate in my fantasy baseball
+          league draft, which a group of us has been doing regularly since 1996. I'm also a huge NFL and NHL fan.</p>
+        <p class="mb-0">When I'm not sitting in front of a computer or watching sports, I enjoy cooking at home. I try
+          to find new and interesting recipies online and try them out on my unsuspecting wife.</p>
+      </div>
+    </section>
+
+
+  </div>
+
+  <!-- Javascript for bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+  <script src="js/jquery.easing.min.js"></script>
+
+  <!-- ////////////// -->
+
+  <!-- Custom scripts for this template -->
+  <script src="js/resume.min.js"></script>
+
 </body>
 
 </html>
