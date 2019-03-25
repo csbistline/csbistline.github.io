@@ -200,3 +200,11 @@ a:hover, a:focus, a:active {
 .portfolio-pic {
   width: 100%;
 }
+
+.myicons {
+  fill: gray;
+}
+
+.myicons:hover {
+  fill: cornflowerblue;
+}
