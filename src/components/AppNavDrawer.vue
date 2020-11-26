@@ -1,42 +1,80 @@
 <template>
-  <v-navigation-drawer permanent app v-if="drawer">
-    <v-list-item>
-      <v-list-item-content>
-        <v-list-item-title class="title"> Application </v-list-item-title>
-        <v-list-item-subtitle> subtext </v-list-item-subtitle>
-      </v-list-item-content>
-    </v-list-item>
+  <v-navigation-drawer
+    class="pa-3 pt-12"
+    permanent
+    app
+    color="blue-grey lighten-1"
+  >
+    <div class="nav-drawer">
+      <v-avatar
+        size="164"
+      >
+        <v-img
+          src="../assets/img/chris-profile.jpg"
+          alt="Chris Bistline"
+        />
+      </v-avatar>
 
-    <v-divider></v-divider>
+      <div class="text-center name">
+        CHRIS
+        BISTLINE
+      </div>
+      <div class="light-name">
+        WEB DEVELOPER
+      </div>
 
-    <v-list dense nav>
-      <v-list-item v-for="item in items" :key="item.title" link>
-        <v-list-item-icon>
-          <v-icon>{{ item.icon }}</v-icon>
-        </v-list-item-icon>
-
-        <v-list-item-content>
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-    </v-list>
+      <v-list
+        rounded
+        dense
+      >
+        <v-list-item-group
+          v-model="selectedItem"
+          color="rgb(255,255,255)"
+          dark
+        >
+          <v-list-item
+            v-for="item in items"
+            :key="item.title"
+          >
+            <v-list-item-content>
+              <v-list-item-title>
+                {{ item.title }}
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </div>
   </v-navigation-drawer>
 </template>
 
 <script>
-    export default {
-        name: "NavigationDrawer",
-          data: () => ({
-    items: [
-      { title: "Dashboard", icon: "mdi-view-dashboard" },
-      { title: "Photos", icon: "mdi-image" },
-      { title: "About", icon: "mdi-help-box" },
-    ],
-    right: null,
-    group: null,
-  }),
-    }
+  import { menuItems } from '../db/db.js'
+
+  export default {
+    name: 'NavigationDrawer',
+    data: () => ({
+      selectedItem: 0,
+      items: menuItems,
+    }),
+  }
 </script>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
+.nav-drawer {
+  text-align: center;
+}
+.name {
+  margin-top: 1rem;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+.light-name {
+  margin-bottom: 0.5rem;
+  color: rgb(26, 218, 20);
+  font-weight: 600;
+
+}
 </style>

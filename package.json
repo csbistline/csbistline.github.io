@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "http-parser-js": "^0.5.2",
     "vue": "^2.6.11",
     "vuetify": "^2.2.11"
   },
@@ -36,11 +37,24 @@
     },
     "extends": [
       "vuetify",
-      "plugin:vue/strongly-recommended",
+      "plugin:vue/recommended",
       "eslint:recommended"
     ],
     "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
       "parser": "babel-eslint"
+    },
+    "rules": {
+        "vue/component-name-in-template-casing": ["warn", "PascalCase", {
+          "registeredComponentsOnly": true,
+          "ignores": []
+        }],
+        "vue/singleline-html-element-content-newline": ["warn", {
+          "ignoreWhenNoAttributes": true,
+          "ignoreWhenEmpty": true,
+          "ignores": ["pre", "textarea"]
+        }]
     }
   },
   "browserslist": [

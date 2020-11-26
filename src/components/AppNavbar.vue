@@ -1,19 +1,48 @@
 <template>
   <div>
-    <v-app-bar color="blue accent-2" dense dark flat>
-      <v-toolbar-title>Chris Bistline - Developer</v-toolbar-title>
+    <v-app-bar
+      color="blue-grey lighten-1"
+      dark
+    >
+      <v-avatar
+        size="36"
+        class="mr-2"
+      >
+        <v-img
+          src="../assets/img/chris-profile.jpg"
+          alt="Chris Bistline"
+        />
+      </v-avatar>
+      <v-toolbar-title>CHRIS BISTLINE - WEB DEVELOPER</v-toolbar-title>
 
-      <v-spacer></v-spacer>
-      <v-menu right bottom>
+      <v-spacer />
+      <v-menu
+        right
+        bottom
+      >
         <template v-slot:activator="{ on, attrs }">
-          <v-btn icon v-bind="attrs" v-on="on">
+          <v-btn
+            icon
+            v-bind="attrs"
+            v-on="on"
+          >
             <v-app-bar-nav-icon />
           </v-btn>
         </template>
 
-        <v-list>
-          <v-list-item v-for="n in 5" :key="n" @click="() => {}">
-            <v-list-item-title>Option {{ n }} </v-list-item-title>
+        <v-list
+          rounded
+          dense
+        >
+          <v-list-item
+            v-for="item in items"
+            :key="item.title"
+          >
+            <v-list-item-content>
+              <v-list-item-title>
+                {{ item.title }}
+              </v-list-item-title>
+            </v-list-item-content>
           </v-list-item>
         </v-list>
       </v-menu>
@@ -22,7 +51,14 @@
 </template>
 
 <script>
-export default {};
+  import { menuItems } from '../db/db.js'
+
+  export default {
+    name: 'NavigationBar',
+    data: () => ({
+      items: menuItems,
+    }),
+  }
 </script>
 
 <style lang="sass" scoped>

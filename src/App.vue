@@ -1,33 +1,31 @@
 <template>
   <v-app>
     <AppNavbar v-if="!drawer" />
+    <AppNavDrawer v-else />
 
     <v-main>
-      <v-container fluid> Main section content </v-container>
+      <v-container
+        fluid
+        class="pt-12"
+      >
+        Main section content
+      </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import AppNavbar from "./components/AppNavbar"
-export default {
-  name: "App",
+  import AppNavbar from './components/AppNavbar'
+  import AppNavDrawer from './components/AppNavDrawer'
 
-  components: {AppNavbar},
-
-  data: () => ({     
-    items: [
-           { title: "Dashboard", icon: "mdi-view-dashboard" },
-      { title: "Photos", icon: "mdi-image" },
-      { title: "About", icon: "mdi-help-box" },
-    ],
-    right: null,
-    group: null,
-  }),
-  computed: {
-    drawer() {
-      return this.$vuetify.breakpoint.smAndUp;
+  export default {
+    name: 'App',
+    components: { AppNavbar, AppNavDrawer },
+    data: () => ({}),
+    computed: {
+      drawer () {
+        return this.$vuetify.breakpoint.mdAndUp
+      },
     },
-  },
-};
+  }
 </script>
