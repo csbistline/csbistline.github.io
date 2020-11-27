@@ -6,9 +6,9 @@
     <v-main>
       <v-container
         fluid
-        class="pt-12"
+        class="pt-12 pl-9"
       >
-        Main section content
+        <MainAbout />
       </v-container>
     </v-main>
   </v-app>
@@ -17,10 +17,11 @@
 <script>
   import AppNavbar from './components/AppNavbar'
   import AppNavDrawer from './components/AppNavDrawer'
+  import MainAbout from './components/MainAbout'
 
   export default {
     name: 'App',
-    components: { AppNavbar, AppNavDrawer },
+    components: { AppNavbar, AppNavDrawer, MainAbout },
     data: () => ({}),
     computed: {
       drawer () {
