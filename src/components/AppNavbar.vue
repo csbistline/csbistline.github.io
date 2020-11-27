@@ -13,7 +13,6 @@
           alt="Chris Bistline"
         />
       </v-avatar>
-      <v-toolbar-title>CHRIS BISTLINE - WEB DEVELOPER</v-toolbar-title>
 
       <v-spacer />
       <v-menu

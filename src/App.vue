@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <AppNavbar v-if="!drawer" />
+    <AppFloatingMenu v-if="!drawer" />
     <AppNavDrawer v-else />
 
     <v-main>
@@ -15,13 +15,15 @@
 </template>
 
 <script>
-  import AppNavbar from './components/AppNavbar'
+  import AppFloatingMenu from './components/AppFloatingMenu'
   import AppNavDrawer from './components/AppNavDrawer'
   import MainAbout from './components/MainAbout'
 
   export default {
     name: 'App',
-    components: { AppNavbar, AppNavDrawer, MainAbout },
+    components: {
+      AppNavDrawer, MainAbout, AppFloatingMenu,
+    },
     data: () => ({}),
     computed: {
       drawer () {

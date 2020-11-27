@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <h1 class="name">
-      CHRIS <span class="highlight">
-        BISTLINE
-      </span>
-    </h1>
-    <div class="light-name">
-      WEB DEVELOPER
+  <div class="d-flex flex-wrap">
+    <div class="name mr-3">
+      {{ firstName }}
+    </div>
+    <div class="name highlight ">
+      {{ lastName }}
     </div>
   </div>
 </template>
@@ -18,7 +16,7 @@
     name: 'AboutSection',
     data: () => ({
       firstName: aboutSection.firstName,
-      lastName: aboutSection.email,
+      lastName: aboutSection.lastName,
       address: aboutSection.address,
       phone: aboutSection.phone,
       email: aboutSection.email,
@@ -30,7 +28,6 @@
 .name {
   text-transform: uppercase;
   font-family: "Saira Extra Condensed";
-  margin-top: 1rem;
   color: black;
   font-size: 7rem;
   font-weight: 700;
