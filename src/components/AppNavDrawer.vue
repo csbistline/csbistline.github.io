@@ -21,7 +21,7 @@
       >
         <v-list-item-group
           v-model="selectedItem"
-          color="rgb(255,255,255)"
+          color="rgb(255,255,255, .75)"
           dark
         >
           <v-list-item

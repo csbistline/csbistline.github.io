@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <v-menu >
+  <div id="about">
+    <v-menu>
       <template v-slot:activator="{ on, attrs }">
         <v-btn
           class="ma-2 mt-12"
@@ -9,7 +9,7 @@
           absolute
           right
           dark
-          color="anyColor"
+          color="#5BB7DE"
           v-bind="attrs"
           v-on="on"
         >

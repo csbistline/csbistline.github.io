@@ -3,11 +3,13 @@
     <AppFloatingMenu v-if="!drawer" />
     <AppNavDrawer v-else />
 
-    <v-main>
+    <v-main class="background">
       <v-container
         fluid
-        class="pt-12 pl-9"
+        class="pt-12 px-9 main"
       >
+        <MainAbout />
+        <MainAbout />
         <MainAbout />
       </v-container>
     </v-main>
@@ -32,3 +34,14 @@
     },
   }
 </script>
+<style lang="scss" scoped>
+.main {
+  max-width: 600px;
+  position: absolute;
+  left: 0;
+  background-color: white;
+}
+.background {
+  background-color: rgb(120, 144, 156,);
+}
+</style>
