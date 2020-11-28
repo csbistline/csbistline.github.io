@@ -42,16 +42,14 @@
 </template>
 
 <script>
-  import { menuItems } from '../db/db.js'
+import { menuItems } from "../db/db.js";
 
-  export default {
-    name: 'NavigationBar',
-    data: () => ({
-      items: menuItems,
-      selectedItem: 0,
-    }),
-  }
+export default {
+  name: "NavigationBar",
+  data: () => ({
+    items: menuItems,
+    selectedItem: 0
+  })
+};
 </script>
 
-<style lang="sass" scoped>
-</style>

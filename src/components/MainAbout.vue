@@ -88,38 +88,3 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.name {
-  text-transform: uppercase;
-  font-family: "Saira Extra Condensed";
-  color: black;
-  font-size: 7rem;
-  font-weight: 700;
-  line-height: 6rem;
-}
-.highlight {
-  color: #78909c;
-}
-.accent-2 {
-  color: #00b8d4;
-}
-.no-decoration {
-  text-decoration: none;
-}
-.subheading {
-  text-transform: uppercase;
-  font-weight: 500;
-  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1.5rem;
-}
-.lead {
-  font-size: 1rem;
-  font-weight: 400;
-  color: black;
-}
-.full-height {
-  height: 100vh;
-}
-</style>

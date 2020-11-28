@@ -70,7 +70,7 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .nav-drawer {
   text-align: center;
 }
