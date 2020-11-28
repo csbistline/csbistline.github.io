@@ -36,7 +36,6 @@
       "node": true
     },
     "extends": [
-      "vuetify",
       "plugin:vue/recommended",
       "eslint:recommended"
     ],
@@ -46,6 +45,8 @@
       "parser": "babel-eslint"
     },
     "rules": {
+        "no-debugger": "off",
+        "no-unused-vars": "warn",
         "vue/component-name-in-template-casing": ["warn", "PascalCase", {
           "registeredComponentsOnly": true,
           "ignores": []

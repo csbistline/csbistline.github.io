@@ -27,6 +27,7 @@
           <v-list-item
             v-for="item in items"
             :key="item.title"
+            @click="scroll(item.anchor, options)"
           >
             <v-list-item-content>
               <v-list-item-title>
@@ -48,7 +49,24 @@
     data: () => ({
       selectedItem: 0,
       items: menuItems,
+      duration: 1000,
+      offset: 48,
+      easing: 'easeInOutCubic',
     }),
+    computed: {
+      options () {
+        return {
+          duration: this.duration,
+          offset: this.offset,
+          easing: this.easing,
+        }
+      },
+    },
+    methods: {
+      scroll (anchor, options) {
+        this.$vuetify.goTo(anchor, options)
+      },
+    },
   }
 </script>
 

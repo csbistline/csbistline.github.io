@@ -1,5 +1,9 @@
 <template>
-  <div>
+  <div
+    :id="id"
+    v-intersect="onIntersect"
+    class="full-height"
+  >
     <!-- NAME LINE -->
     <div class="d-flex flex-wrap">
       <div class="name mr-3">
@@ -50,27 +54,38 @@
 </template>
 
 <script>
-  import { aboutSection } from '../db/db.js'
-  import BtnSocialIcon from './BtnSocialIcon'
+import { aboutSection } from "../db/db.js";
+import BtnSocialIcon from "./BtnSocialIcon";
 
-  export default {
-    name: 'AboutSection',
-    components: {
-      BtnSocialIcon,
-    },
-    data: () => ({
-      firstName: aboutSection.firstName,
-      lastName: aboutSection.lastName,
-      address: aboutSection.address,
-      phone: aboutSection.phone,
-      email: aboutSection.email,
-      about: aboutSection.about,
-      facebook: aboutSection.facebook,
-      linkedin: aboutSection.linkedin,
-      github: aboutSection.github,
-    }),
-    methods: {},
+export default {
+  name: "AboutSection",
+  components: {
+    BtnSocialIcon
+  },
+  props: { id: { type: String, required: false, default: "about" } },
+  data: () => ({
+    firstName: aboutSection.firstName,
+    lastName: aboutSection.lastName,
+    address: aboutSection.address,
+    phone: aboutSection.phone,
+    email: aboutSection.email,
+    about: aboutSection.about,
+    facebook: aboutSection.facebook,
+    linkedin: aboutSection.linkedin,
+    github: aboutSection.github,
+    isIntersecting: false
+  }),
+  methods: {
+    onIntersect(entries) {
+      // More information about these options
+      // is located here: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+      this.isIntersecting = entries[0].isIntersecting;
+      if (this.isIntersecting) {
+        this.$emit("changeMenu", `#${this.id}`);
+      }
+    }
   }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -83,10 +98,10 @@
   line-height: 6rem;
 }
 .highlight {
-  color: #78909C;
+  color: #78909c;
 }
 .accent-2 {
-  color: #00B8D4;
+  color: #00b8d4;
 }
 .no-decoration {
   text-decoration: none;
@@ -102,7 +117,9 @@
 .lead {
   font-size: 1rem;
   font-weight: 400;
-  color: black
-
+  color: black;
+}
+.full-height {
+  height: 100vh;
 }
 </style>

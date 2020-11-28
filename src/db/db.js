@@ -1,10 +1,10 @@
 export const menuItems = [
-  { title: 'ABOUT', anchor: '#' },
-  { title: 'PORTFOLIO', anchor: '#' },
-  { title: 'EXPERIENCE', anchor: '#' },
-  { title: 'EDUCATION', anchor: '#' },
-  { title: 'SKILLS', anchor: '#' },
-  { title: 'INTERESTS', anchor: '#' },
+  { title: 'ABOUT', anchor: '#about' },
+  { title: 'PORTFOLIO', anchor: '#portfolio' },
+  { title: 'EXPERIENCE', anchor: '#experience' },
+  { title: 'EDUCATION', anchor: '#education' },
+  { title: 'SKILLS', anchor: '#skills' },
+  { title: 'INTERESTS', anchor: '#interests' },
 ]
 
 export const aboutSection = {
