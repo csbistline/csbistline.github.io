@@ -1,5 +1,5 @@
 <template>
-  <v-app class="background">
+  <v-app class="no-scroll">
     <AppFloatingMenu
       v-if="!drawer"
       ref="AppFloatingMenu"
@@ -9,28 +9,48 @@
       ref="AppNavDrawer"
     />
 
-    <v-main
-      class="background"
-    >
+    <v-main>
       <v-container
         fluid
-        class="pt-12 px-9 main"
+        class="pt-12 px-9 main carousel-width"
       >
-        <MainAbout
-          id="about"
-          class="mb-12"
-          @changeMenu="changeMenu"
-        />
-        <MainExperience
-          id="experience"
-          class="mb-12"
-          @changeMenu="changeMenu"
-        />
-        <MainEducation
-          id="education"
-          class="mb-12"
-          @changeMenu="changeMenu"
-        />
+        <v-row>
+          <v-col
+            cols="12"
+            md="10"
+          >
+            <MainAbout
+              id="about"
+              class="mb-12"
+              @changeMenu="changeMenu"
+            />
+            <MainPortfolio
+              id="portfolio"
+              class="mb-12"
+              @changeMenu="changeMenu"
+            />
+            <MainExperience
+              id="experience"
+              class="mb-12"
+              @changeMenu="changeMenu"
+            />
+            <MainEducation
+              id="education"
+              class="mb-12"
+              @changeMenu="changeMenu"
+            />
+            <MainSkills
+              id="skills"
+              class="mb-12"
+              @changeMenu="changeMenu"
+            />
+            <MainInterests
+              id="interests"
+              class="mb-12"
+              @changeMenu="changeMenu"
+            />
+          </v-col>
+        </v-row>
       </v-container>
     </v-main>
   </v-app>
@@ -43,6 +63,9 @@ import AppNavDrawer from "./components/AppNavDrawer";
 import MainAbout from "./components/MainAbout";
 import MainExperience from "./components/MainExperience";
 import MainEducation from "./components/MainEducation";
+import MainInterests from "./components/MainInterests";
+import MainSkills from "./components/MainSkills";
+import MainPortfolio from "./components/MainPortfolio";
 
 export default {
   name: "App",
@@ -51,7 +74,10 @@ export default {
     AppFloatingMenu,
     MainAbout,
     MainExperience,
-    MainEducation
+    MainEducation,
+    MainInterests,
+    MainSkills,
+    MainPortfolio
   },
   data: () => ({}),
   computed: {
@@ -64,22 +90,16 @@ export default {
       const anchors = menuItems.map(item => item.anchor);
       const index = anchors.indexOf(anchor);
       this.$refs.AppNavDrawer.selectedItem = index;
-    },
-    onScroll(e) {
-      console.log(e);
     }
   }
 };
 </script>
 <style lang="scss" >
 .main {
-  max-width: 900px;
+  height: 100%;
   position: absolute;
   left: 0;
   background-color: white;
-}
-.background {
-  background-color: rgb(120, 144, 156);
 }
 .name {
   text-transform: uppercase;
@@ -113,9 +133,20 @@ export default {
   margin-bottom: 0 !important;
 }
 .full-height {
-  min-height: 100vh;
+  min-height: 110vh;
 }
-
+.description {
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 0 !important;
+}
+.shadow {
+  text-shadow: 1px 1px 3px black;
+}
+.carousel-width {
+  max-width: 1000px;
+}
 h2,
 h3,
 h4 {

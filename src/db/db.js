@@ -73,5 +73,109 @@ export const educationSection = [
     dates: "August 1993 - May 1997",
     description: "Secondary focus in Computer Science"
   },
-  
+]
+
+export const interestSection = {
+  description: "I'm a die-hard St. Louis Cardinals baseball fan. I travel to Florida every year to catch a few Spring Training games and participate in my fantasy baseball league draft, which a group of us has been doing regularly since 1996. I'm also a huge NFL and NHL fan. When I'm not sitting in front of a computer or watching sports, I enjoy cooking at home. I try to find new and interesting recipies online and try them out on my unsuspecting wife."
+}
+
+export const skillsSection = [
+  {
+    icon: "mdi-vuejs",
+    altText: "VueJS"
+  },
+  {
+    icon: "mdi-react",
+    altText: "ReactJS"
+  },
+  {
+    icon: "mdi-vuetify ",
+    altText: "Vuetify UI library"
+  },
+  {
+    icon: "mdi-bootstrap",
+    altText: "Bootstrap UI library<br>React-Bootstrap"
+  },
+  {
+    icon: "mdi-language-javascript",
+    altText: "JavaScript<br>jQuery"
+  },
+  {
+    icon: "mdi-nodejs",
+    altText: "NodeJS"
+  },
+  {
+    icon: "mdi-language-html5",
+    altText: "HTML5"
+  },
+  {
+    icon: "mdi-language-css3",
+    altText: "CSS3"
+  },
+  {
+    icon: "mdi-language-csharp ",
+    altText: "C#"
+  },
+  {
+    icon: "mdi-dot-net  ",
+    altText: ".NET"
+  },
+  {
+    icon: "mdi-database",
+    altText: "SQL<br>Sequelize<br>MongoDB<br>Mongoose<br>Firebase"
+  },
+  {
+    icon: "mdi-git",
+    altText: "Git<br>Github"
+  },
+  {
+    icon: "mdi-test-tube",
+    altText: "Jest<br>Cypress"
+  },
+  {
+    icon: "mdi-microsoft-azure-devops",
+    altText: "Microsoft Azure DevOps"
+  },
+  {
+    icon: "mdi-docker",
+    altText: "Docker"
+  },
+]
+
+export const portfolioSection = [
+  {
+    src: require("../assets/img/youarehere.jpg"),
+    title: "You're lookin' at it",
+    description: "My personal portfolio page, created with VueJS and the Vuetify UI component library.",
+    link: "https://parts-manager-hi5.herokuapp.com/",
+    github: "https://github.com/csbistline/project3"
+  },
+  {
+    src: require("../assets/img/serviceImg02.jpg"),
+    title: "PARTS MANAGER",
+    description: "Vanderbilt bootcamp final group project: A customer request and workflow-management system designed specifically to fit the needs of the Chrysler Dodge Jeep Ram parts department in Franklin, TN. A full-stack MERN application.",
+    link: "https://parts-manager-hi5.herokuapp.com/",
+    github: "https://github.com/csbistline/project3"
+  },
+  {
+    src: require("../assets/img/gamerbook.png"),
+    title: "GAMERBOOK",
+    description: "Vanderbilt bootcamp second group project: A social networking site for fans of video games. Full-stack application.",
+    link: "https://jk-cb-asp-project2.herokuapp.com/",
+    github: "https://github.com/jryankendall/Vandy-Project-2"
+  },
+  {
+    src: require("../assets/img/memory.jpg"),
+    title: "MEMORY",
+    description: "A memory-style game built with React. Click as many unique images as possible without clicking the same one twice.",
+    link: "https://mlb-clicky-game.herokuapp.com/",
+    github: "https://github.com/csbistline/clicky-game"
+  },
+  {
+    src: require("../assets/img/deathstar2.jpg"),
+    title: "STAR WARS FIGHTER",
+    description: "A Star Wars-themed Javascript game - with real lightsaber sounds!",
+    link: "https://csbistline.github.io/unit-4-game/",
+    github: "https://github.com/csbistline/unit-4-game"
+  }
 ]

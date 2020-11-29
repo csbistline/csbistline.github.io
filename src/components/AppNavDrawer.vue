@@ -1,5 +1,6 @@
 <template>
   <v-navigation-drawer
+    ref="myNavDrawer"
     class="pa-3 pt-12"
     app
     permanent
@@ -42,32 +43,34 @@
 </template>
 
 <script>
-  import { menuItems } from '../db/db.js'
+import { menuItems } from "../db/db.js";
 
-  export default {
-    name: 'NavigationDrawer',
-    data: () => ({
-      selectedItem: 0,
-      items: menuItems,
-      duration: 1000,
-      offset: 48,
-      easing: 'easeInOutCubic',
-    }),
-    computed: {
-      options () {
-        return {
-          duration: this.duration,
-          offset: this.offset,
-          easing: this.easing,
-        }
-      },
-    },
-    methods: {
-      scroll (anchor, options) {
-        this.$vuetify.goTo(anchor, options)
-      },
-    },
+export default {
+  name: "NavigationDrawer",
+  data: () => ({
+    selectedItem: 0,
+    items: menuItems,
+    duration: 1000,
+    offset: 48,
+    easing: "easeInOutCubic",
+    navDrawerContent: null
+  }),
+  computed: {
+    options() {
+      return {
+        duration: this.duration,
+        offset: this.offset,
+        easing: this.easing,
+      };
+    }
+  },
+
+  methods: {
+    scroll(anchor, options) {
+      this.$vuetify.goTo(anchor, options);
+    }
   }
+};
 </script>
 
 <style lang="scss">

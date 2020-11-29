@@ -30,12 +30,15 @@
       <div class="subheading mb-5">
         {{ phone }}
       </div>
-
-    <!-- INTRO INFO LINE  -->
     </div>
+    <!-- INTRO INFO LINE  -->
     <p class="lead mb-5">
       {{ about }}
     </p>
+
+    <h4 class="pt-4 mb-0 highlight">
+      Contact or follow me on social media
+    </h4>
 
     <!-- SOCIAL ICONS -->
     <BtnSocialIcon

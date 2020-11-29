@@ -29,7 +29,7 @@ export default {
   components: {
     ModuleExperience
   },
-  props: { id: { type: String, required: false, default: "about" } },
+  props: { id: { type: String, required: false, default: "education" } },
   data: () => ({
     isIntersecting: false,
     items: educationSection

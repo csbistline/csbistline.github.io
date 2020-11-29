@@ -6,7 +6,7 @@
           class="ma-2 mt-12"
           fab
           elevation="0"
-          absolute
+          fixed
           right
           dark
           color="#5BB7DE"
