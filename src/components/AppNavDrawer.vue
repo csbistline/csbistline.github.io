@@ -52,8 +52,7 @@ export default {
     items: menuItems,
     duration: 1000,
     offset: 48,
-    easing: "easeInOutCubic",
-    navDrawerContent: null
+    easing: "easeInOutCubic"
   }),
   computed: {
     options() {
@@ -64,7 +63,6 @@ export default {
       };
     }
   },
-
   methods: {
     scroll(anchor, options) {
       this.$vuetify.goTo(anchor, options);

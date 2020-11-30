@@ -1,7 +1,8 @@
 <template>
   <v-row>
     <v-col
-      cols="8"
+      cols="12"
+      sm="8"
     > 
       <h3> {{ title }} </h3>
       <h4 class="highlight">
@@ -12,7 +13,8 @@
       </p>
     </v-col>
     <v-col
-      cols="4"
+      cols="12"
+      sm="4"
     >
       <p class="accent-2">
         {{ dates }}

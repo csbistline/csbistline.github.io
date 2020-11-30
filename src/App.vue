@@ -89,7 +89,11 @@ export default {
     changeMenu(anchor) {
       const anchors = menuItems.map(item => item.anchor);
       const index = anchors.indexOf(anchor);
-      this.$refs.AppNavDrawer.selectedItem = index;
+      if (this.$refs.AppNavDrawer) {
+        this.$refs.AppNavDrawer.selectedItem = index;
+      } else {
+        this.$refs.AppFloatingMenu.selectedItem = index;
+      }
     }
   }
 };
@@ -166,7 +170,7 @@ h3 {
 h4 {
   font-weight: 500;
   font-size: 1.5rem;
-  line-height: 1rem;
+  line-height: 1.25rem;
   margin-bottom: 1rem;
 }
 </style>

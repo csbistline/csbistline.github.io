@@ -23,11 +23,12 @@
       >
         <v-list-item-group
           v-model="selectedItem"
-          color="grey"
+          color="black"
         >
           <v-list-item
             v-for="item in items"
             :key="item.title"
+            @click="scroll(item.anchor, options)"
           >
             <v-list-item-content>
               <v-list-item-title>
@@ -47,9 +48,26 @@ import { menuItems } from "../db/db.js";
 export default {
   name: "NavigationBar",
   data: () => ({
+    selectedItem: 0,
     items: menuItems,
-    selectedItem: 0
-  })
+    duration: 1000,
+    offset: 48,
+    easing: "easeInOutCubic"
+  }),
+  computed: {
+    options() {
+      return {
+        duration: this.duration,
+        offset: this.offset,
+        easing: this.easing
+      };
+    }
+  },
+  methods: {
+    scroll(anchor, options) {
+      this.$vuetify.goTo(anchor, options);
+    }
+  }
 };
 </script>
 
