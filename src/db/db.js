@@ -147,8 +147,8 @@ export const portfolioSection = [
     src: require("../assets/img/youarehere.jpg"),
     title: "You're lookin' at it",
     description: "My personal portfolio page, created with VueJS and the Vuetify UI component library.",
-    link: "https://parts-manager-hi5.herokuapp.com/",
-    github: "https://github.com/csbistline/project3"
+    link: "https://csbistline.github.io/",
+    github: "https://github.com/csbistline/csbistline.github.io"
   },
   {
     src: require("../assets/img/serviceImg02.jpg"),
