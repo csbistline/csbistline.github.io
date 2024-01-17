@@ -24,11 +24,6 @@
               class="mb-12"
               @changeMenu="changeMenu"
             />
-            <MainPortfolio
-              id="portfolio"
-              class="mb-12"
-              @changeMenu="changeMenu"
-            />
             <MainExperience
               id="experience"
               class="mb-12"
@@ -65,7 +60,6 @@ import MainExperience from "./components/MainExperience";
 import MainEducation from "./components/MainEducation";
 import MainInterests from "./components/MainInterests";
 import MainSkills from "./components/MainSkills";
-import MainPortfolio from "./components/MainPortfolio";
 
 export default {
   name: "App",
@@ -76,8 +70,7 @@ export default {
     MainExperience,
     MainEducation,
     MainInterests,
-    MainSkills,
-    MainPortfolio
+    MainSkills
   },
   data: () => ({}),
   computed: {
